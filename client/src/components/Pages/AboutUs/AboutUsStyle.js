@@ -20,7 +20,8 @@ export default makeStyles(() => ({
       flexDirection: 'row',
       height: 200,
       justifyContent: 'space-around',
-      width:'100%'
+      width:'100%',
+      marginBottom:80
   },
   photo: {
     borderRadius:25,
