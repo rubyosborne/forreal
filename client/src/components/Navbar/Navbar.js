@@ -44,7 +44,7 @@ const Navbar = () => {
      <nav className='navbar'>
      <div className='navbar-container'>
      <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            MechaProjects
+            MechProjects
           <FaWrench/>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
