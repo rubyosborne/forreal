@@ -4,7 +4,6 @@ video{
   height: 100%;
   z-index: -1;
   align-items: center;
-
   position: sticky;
 }
 
@@ -25,8 +24,9 @@ padding: 10px;
 color: #fff;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 position: absolute;
-top: 45%;
-left: 6%;
+top: 40%;
+left: 17%;
+width: 75%;
 font-weight: bolder;
 text-shadow:rgb(66, 63, 63) 2px 2px;
 
