@@ -3,10 +3,9 @@ import { deepPurple } from '@material-ui/core/colors';
 
 export default makeStyles((theme) => ({
  
-
   toolbar: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     width: '400px',
     [theme.breakpoints.down('sm')]: {
       width: 'auto',
@@ -37,8 +36,8 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
   },
   purple: {
-    color: theme.palette.getContrastText(deepPurple[500]),
-    backgroundColor: deepPurple[500],
+    color: theme.palette.getContrastText(deepPurple[200]),
+    backgroundColor: deepPurple[50],
     marginRight:10
   },
 }));
