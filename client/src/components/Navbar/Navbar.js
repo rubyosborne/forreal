@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
+import {  Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 import "./NavBar.css";
-import memoriesLogo from '../../images/memoriesLogo.png';
-import memoriesText from '../../images/memoriesText.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
+import { FaWrench , FaTimes, FaBars } from 'react-icons/fa'
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -46,14 +45,14 @@ const Navbar = () => {
      <div className='navbar-container'>
      <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             MechaProjects
-            <i class='fas fa-wrench' />
+          <FaWrench/>
           </Link>
           <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            {click ? (<FaTimes color='white'/>) : (<FaBars color='white'/>)} 
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
-              <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+              <Link to='/posts' className='nav-links' onClick={closeMobileMenu}>
               Projects
               </Link>
             </li>
@@ -74,10 +73,10 @@ const Navbar = () => {
           <div className={classes.profile}>
             <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
             <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
-            <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
+            <Button variant="contained" className={classes.logout} style ={{backgroundColor:"#c721dd", color: "#f4f4f4"}} onClick={logout}>Logout</Button>
           </div>
         ) : (
-          <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
+          <Button component={Link} to="/auth" onClick={closeMobileMenu} variant="contained" style ={{backgroundColor:"#c721dd", color: "#f4f4f4"}}>Sign In</Button>
         )}
       </Toolbar>
       </ul>

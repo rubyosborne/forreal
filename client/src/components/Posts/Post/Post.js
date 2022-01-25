@@ -86,11 +86,11 @@ const Post = ({ post, setCurrentId }) => {
         </CardContent>
       </ButtonBase>
       <CardActions className={classes.cardActions}>
-        <Button size="small" color="primary" disabled={!user?.result} onClick={handleLike}>
+        <Button size="small" style ={{color:"#c721dd"}} disabled={!user?.result} onClick={handleLike}>
           <Likes />
         </Button>
         {(user?.result?.googleId === post?.creator || user?.result?._id === post?.creator) && (
-          <Button size="small" color="secondary" onClick={() => dispatch(deletePost(post._id))}>
+          <Button size="small" style ={{color:"#757373"}} onClick={() => dispatch(deletePost(post._id))}>
             <DeleteIcon fontSize="small" /> &nbsp; Delete
           </Button>
         )}

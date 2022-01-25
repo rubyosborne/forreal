@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, AppBar, Typography} from '@material-ui/core';
-import spanner from '../images/BlackSpanner.png';
-import useStyles from './styles';
-import useStylesAboutUs from './AboutUsStyle.js';
-import Christos from '../images/Christos.jpg';
-import Ruby from '../images/Ruby.jpg';
-import Leo from '../images/Leo.jpg';
+import spanner from '/Users/rubyosborne/forreal/client/src/images/BlackSpanner.png';
+import useStyles from '/Users/rubyosborne/forreal/client/src/components/Pages/AboutUs/styles.js';
+import useStylesAboutUs from '/Users/rubyosborne/forreal/client/src/components/Pages/AboutUs/AboutUsStyle.js';
+import Christos from '/Users/rubyosborne/forreal/client/src/images/Christos.jpg';
+import Ruby from '/Users/rubyosborne/forreal/client/src/images/Ruby.jpg';
+import Leo from '/Users/rubyosborne/forreal/client/src/images/Leo.jpg';
 
 function AboutUs() {
     const classes = useStyles();
