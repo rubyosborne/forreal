@@ -1,6 +1,6 @@
 import './Home.css'
 import React from 'react';
-import Car from "../images/Car.mp4";
+import Car from "/Users/rubyosborne/forreal/client/src/images/Car.mp4";
 
 const HomeScreen = () => {
     return (

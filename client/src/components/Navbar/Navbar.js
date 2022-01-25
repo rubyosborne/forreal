@@ -3,13 +3,17 @@ import { AppBar, Typography, Toolbar, Avatar, Button } from '@material-ui/core';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
-
+import "./NavBar.css";
 import memoriesLogo from '../../images/memoriesLogo.png';
 import memoriesText from '../../images/memoriesText.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './styles';
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
   const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
   const dispatch = useDispatch();
   const location = useLocation();
@@ -37,11 +41,34 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <AppBar className={classes.appBar} position="static" color="inherit">
-      <Link to="/" className={classes.brandContainer}>
-        <img component={Link} to="/" src={memoriesText} alt="icon" height="45px" />
-        <img className={classes.image} src={memoriesLogo} alt="icon" height="40px" />
-      </Link>
+    <>
+     <nav className='navbar'>
+     <div className='navbar-container'>
+     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            MechaProjects
+            <i class='fas fa-wrench' />
+          </Link>
+          <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </div>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <Link to='/projects' className='nav-links' onClick={closeMobileMenu}>
+              Projects
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/aboutUs'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                About Us
+              </Link>
+            </li>
+            <li className='nav-item'>
+         
+        </li>
       <Toolbar className={classes.toolbar}>
         {user?.result ? (
           <div className={classes.profile}>
@@ -53,7 +80,10 @@ const Navbar = () => {
           <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
         )}
       </Toolbar>
-    </AppBar>
+      </ul>
+      </div>
+      </nav>
+      </>
   );
 };
 
