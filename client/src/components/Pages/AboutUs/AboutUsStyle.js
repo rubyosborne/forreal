@@ -18,14 +18,15 @@ export default makeStyles(() => ({
   photos: {
       display:'flex',
       flexDirection: 'row',
-      height: 200,
       justifyContent: 'space-around',
       width:'100%',
-      marginBottom:80
+      marginBottom:'2vh'
   },
   photo: {
     borderRadius:25,
-    height: '25vh'
+    width: '20vw',
+    height: '20vw',
+    resizeMode: 'contain'
   }
 
 }));

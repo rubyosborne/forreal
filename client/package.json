@@ -2,7 +2,7 @@
   "name": "ruby-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://localhost:3000/",
+  "proxy": "https://3.84.55.29:5000/",
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@material-ui/icons": "^4.9.1",

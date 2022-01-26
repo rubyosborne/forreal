@@ -1,6 +1,13 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000' });
+const API = axios.create({
+  baseURL: "http://mechprojects.online:5000",
+  withCredentials: false,
+  headers: {
+    'Access-Control-Allow-Origin' : '*',
+    'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+  }
+});
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {

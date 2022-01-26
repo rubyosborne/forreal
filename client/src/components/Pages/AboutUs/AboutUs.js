@@ -24,15 +24,14 @@ function AboutUs() {
         <div className={classestwo.para}> 
         <h2>Hello and welcome to the MechProjects Website!!<br /> </h2>
         <p> The main purpose of me building this website was to
-            learn how to create a deploy a full mern stack web application and here we are yay. The secondary purpose 
+            learn how to create and deploy a full mern stack web application and here we are yay. The secondary purpose 
             is to create a platform where I can upload projects that we have done so we can look back 
-            and see what cool things we have achieved. If you would like to be added to the websites admin and therefore 
-            be able to post your projects please send me an email and I will give you a key that can be used through the
-            log in portal. (This component isn't working yet)
+            and see cool achievements. If you would like to add some projects feel free to log in and make a post of your project
+            anything is welcome.
             <br />
-            Thanks for visiting !
+            Page features : Christos, Ruby and Leo :)
             <br /><br />
-            Contact: ruby.osborne@gmail.com
+            Thanks for visiting !
             </p>
         </div>
       
