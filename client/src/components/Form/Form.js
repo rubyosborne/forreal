@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import FileBase from 'react-file-base64';
 import { useHistory } from 'react-router-dom';
 import ChipInput from 'material-ui-chip-input';
-import Compress from "react-image-file-resizer";
-import imageCompression from 'browser-image-compression';
 import Resizer from "react-image-file-resizer";
 
 import { createPost, updatePost } from '../../actions/posts';
