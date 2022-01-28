@@ -3,11 +3,16 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import compression from 'compression';
 
 import postRoutes from './routes/posts.js';
 import userRouter from "./routes/user.js";
 
 const app = express();
+app.use(compression({
+  level:6,
+  threshold:0,
+}));
 
 app.use(express.json({ limit: '30mb', extended: true }))
 app.use(express.urlencoded({ limit: '30mb', extended: true }))

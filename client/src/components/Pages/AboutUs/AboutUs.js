@@ -26,7 +26,7 @@ function AboutUs() {
         <p> The main purpose of me building this website was to
             learn how to create and deploy a full mern stack web application and here we are yay. The secondary purpose 
             is to create a platform where I can upload projects that we have done so we can look back 
-            and see cool achievements. If you would like to add some projects feel free to log in and make a post of your project
+            and see cool achievements.If you would like to add some projects feel free to log in and make a post of your project
             anything is welcome.
             <br />
             Page features : Christos, Ruby and Leo :)
