@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: "http://3.84.55.29:5000",
+  baseURL: "https://mechprojects.herokuapp.com",
   withCredentials: false,
   headers: {
     'Access-Control-Allow-Origin' : '*',

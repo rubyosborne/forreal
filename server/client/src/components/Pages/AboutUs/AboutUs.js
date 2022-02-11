@@ -17,7 +17,6 @@ function AboutUs() {
         <img className={classes.image} src={spanner} alt="icon" height="60" />
         </AppBar>
         <div className={classestwo.photos} >
-        <img src={Christos} className={classestwo.photo} alt="christos"/>
         <img src={Ruby} className={classestwo.photo} alt="ruby"/>
         <img src={Leo} className={classestwo.photo} alt="leo"/>
         </div>
@@ -29,7 +28,7 @@ function AboutUs() {
             and see cool achievements.If you would like to add some projects feel free to log in and make a post of your project
             anything is welcome.
             <br />
-            Page features : Christos, Ruby and Leo :)
+            Page features :Ruby and Leo :)
             <br /><br />
             Thanks for visiting !
             </p>
